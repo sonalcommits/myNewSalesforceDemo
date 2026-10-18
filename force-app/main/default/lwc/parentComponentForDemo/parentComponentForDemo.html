@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent Component for Child to Parent" icon-name="standard:account">
+        <p lwc:if={showStatement} class = "slds-text-align_center">
+            Count is : {countValue}    
+        </p>
+        <p lwc:else class="slds-text-align_center">
+            Count is Zero
+        </p>
+
+        <c-child-component-for-demo onsubstract = {handleDecrement} onadd = {handleIncrement} onmultiply = {handleMul}></c-child-component-for-demo>
+    </lightning-card>
+
+</template>

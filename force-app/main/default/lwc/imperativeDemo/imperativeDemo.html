@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Imperative Demo">
+    <lightning-button variant="brand" label="Get Data" onclick={handleClick} ></lightning-button>
+    <lightning-button lwc:if={isDataRetrived} variant="brand" label="Clear Data" onclick={handleClearData} ></lightning-button>
+    <div lwc:if={isDataRetrived} style = "height: 200px">
+        <lightning-datatable
+                key-field="Id"
+                data={data}
+                show-row-number-column
+                columns={columns}>
+            </lightning-datatable>
+            </div>
+    </lightning-card>
+</template>

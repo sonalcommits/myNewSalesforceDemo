@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="forEachDemo">
+     <template lwc:if={dataToDisplay}>
+     <template for:each={dataToDisplay} for:item="contact">
+     <h3 key = {contact.Id}>{contact.Name}</h3>
+     </template>   
+     </template> 
+ <template lwc:elseif = {wiredContacts.error}>
+ {wiredContacts.error}
+  </template>   
+    </lightning-card>
+</template>
